@@ -8,7 +8,7 @@ denoising using locally adaptive Wiener Filters.
 To run the Django app, run the following steps:
 
 - `git clone https://github.com/rishiraj824/adaptive_wiener_filters.git`
-- `python manage.py runmigrations`
+- `python manage.py makemigrations`
 -  `python manage.py migrate`
 - `python manage.py createuser`
 - `python manage.py runserver`
