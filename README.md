@@ -3,12 +3,11 @@
 This [demo](https://github.com/rishiraj824/adaptive_wiener_filters/blob/master/demo/WienerFilters.ipynb) discusses
 denoising using locally adaptive Wiener Filters.
 
-##### Requirements to run this app: python3, cv2, numpy
+##### Requirements to run this app: python3, cv2, numpy, whitenoise
 
 To run the Django app, run the following steps:
 
 - `git clone https://github.com/rishiraj824/adaptive_wiener_filters.git`
-- `python manage.py runmigrations`
 -  `python manage.py migrate`
 - `python manage.py createuser`
 - `python manage.py runserver`

@@ -27,13 +27,13 @@ def upload(request):
             sharpen = cv.filter2D(output, -1, sharpen_kernel)
         else:
             image = loadImage(os.path.join(BASE_DIR, 'media/images/') + name, 0)
-            wiener = WienerFilter(image, (5, 5))
+            wiener = WienerFilter(image, (3, 3))
             output = wiener.estimateOutput()
-            sharpen_kernel = np.array([[0,-1,0], [-1,7,-1], [0,-1,0]])
-            sharpen = cv.filter2D(output, -1, sharpen_kernel)
+            #sharpen_kernel = np.array([[0,-1,0], [-1,5,-1], [0,-1,0]])
+            #sharpen = cv.filter2D(output, -1, sharpen_kernel)
 
 
-        cv.imwrite(os.path.join(BASE_DIR, 'media/images/') + 'processed_' + name, sharpen)
+        cv.imwrite(os.path.join(BASE_DIR, 'media/images/') + 'processed_' + name, output)
 
         return JsonResponse(
             {"message": "Image Succesfully Processed", "image": 'http://127.0.0.1:8000/media/images/' + 'processed_' + name},
