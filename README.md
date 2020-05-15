@@ -8,11 +8,13 @@ denoising using locally adaptive Wiener Filters.
 To run the Django app, run the following steps:
 
 - `git clone https://github.com/rishiraj824/adaptive_wiener_filters.git`
+- `python manage.py runmigrations`
 -  `python manage.py migrate`
 - `python manage.py createuser`
 - `python manage.py runserver`
+- Login here with the credentials, http://127.0.0.1:8000/admin
 
-Open Postman and to use the API:
+Open Postman to use the following API:
 
 ```
 curl --location --request POST 'http://127.0.0.1:8000/upload' \
